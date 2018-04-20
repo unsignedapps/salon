@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E89F76B12089C47E00E9C781 /* Salon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89F76A72089C47E00E9C781 /* Salon.framework */; };
-		E89F76B62089C47E00E9C781 /* SalonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76B52089C47E00E9C781 /* SalonTests.swift */; };
 		E89F76B82089C47E00E9C781 /* Salon.h in Headers */ = {isa = PBXBuildFile; fileRef = E89F76AA2089C47E00E9C781 /* Salon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89F76C42089C57A00E9C781 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C12089C57900E9C781 /* Conditions.swift */; };
+		E89F76C52089C57A00E9C781 /* Styleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C22089C57A00E9C781 /* Styleable.swift */; };
+		E89F76C62089C57A00E9C781 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C32089C57A00E9C781 /* ViewStyle.swift */; };
+		E89F76CB2089C59000E9C781 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C72089C58F00E9C781 /* Utilities.swift */; };
+		E89F76CC2089C59000E9C781 /* ConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C82089C58F00E9C781 /* ConditionTests.swift */; };
+		E89F76CD2089C59000E9C781 /* ViewStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76C92089C58F00E9C781 /* ViewStyleTests.swift */; };
+		E89F76CE2089C59000E9C781 /* StyleableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89F76CA2089C58F00E9C781 /* StyleableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +33,14 @@
 		E89F76AA2089C47E00E9C781 /* Salon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Salon.h; sourceTree = "<group>"; };
 		E89F76AB2089C47E00E9C781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E89F76B02089C47E00E9C781 /* SalonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E89F76B52089C47E00E9C781 /* SalonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonTests.swift; sourceTree = "<group>"; };
 		E89F76B72089C47E00E9C781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E89F76C12089C57900E9C781 /* Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
+		E89F76C22089C57A00E9C781 /* Styleable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styleable.swift; sourceTree = "<group>"; };
+		E89F76C32089C57A00E9C781 /* ViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		E89F76C72089C58F00E9C781 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E89F76C82089C58F00E9C781 /* ConditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionTests.swift; sourceTree = "<group>"; };
+		E89F76C92089C58F00E9C781 /* ViewStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStyleTests.swift; sourceTree = "<group>"; };
+		E89F76CA2089C58F00E9C781 /* StyleableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,9 @@
 		E89F76A92089C47E00E9C781 /* Salon */ = {
 			isa = PBXGroup;
 			children = (
+				E89F76C12089C57900E9C781 /* Conditions.swift */,
+				E89F76C22089C57A00E9C781 /* Styleable.swift */,
+				E89F76C32089C57A00E9C781 /* ViewStyle.swift */,
 				E89F76AA2089C47E00E9C781 /* Salon.h */,
 				E89F76AB2089C47E00E9C781 /* Info.plist */,
 			);
@@ -80,7 +95,10 @@
 		E89F76B42089C47E00E9C781 /* SalonTests */ = {
 			isa = PBXGroup;
 			children = (
-				E89F76B52089C47E00E9C781 /* SalonTests.swift */,
+				E89F76C82089C58F00E9C781 /* ConditionTests.swift */,
+				E89F76CA2089C58F00E9C781 /* StyleableTests.swift */,
+				E89F76C72089C58F00E9C781 /* Utilities.swift */,
+				E89F76C92089C58F00E9C781 /* ViewStyleTests.swift */,
 				E89F76B72089C47E00E9C781 /* Info.plist */,
 			);
 			path = SalonTests;
@@ -148,9 +166,11 @@
 				TargetAttributes = {
 					E89F76A62089C47E00E9C781 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					E89F76AF2089C47E00E9C781 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -194,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89F76C62089C57A00E9C781 /* ViewStyle.swift in Sources */,
+				E89F76C42089C57A00E9C781 /* Conditions.swift in Sources */,
+				E89F76C52089C57A00E9C781 /* Styleable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89F76B62089C47E00E9C781 /* SalonTests.swift in Sources */,
+				E89F76CB2089C59000E9C781 /* Utilities.swift in Sources */,
+				E89F76CC2089C59000E9C781 /* ConditionTests.swift in Sources */,
+				E89F76CD2089C59000E9C781 /* ViewStyleTests.swift in Sources */,
+				E89F76CE2089C59000E9C781 /* StyleableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +365,7 @@
 		E89F76BC2089C47E00E9C781 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -353,9 +380,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.unsignedapps.Salon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unsignedapps.salon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +392,7 @@
 		E89F76BD2089C47E00E9C781 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -378,7 +407,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.unsignedapps.Salon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unsignedapps.salon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -389,6 +418,8 @@
 		E89F76BF2089C47E00E9C781 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RYKJA9N763;
 				INFOPLIST_FILE = SalonTests/Info.plist;
@@ -399,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unsignedapps.SalonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,6 +439,8 @@
 		E89F76C02089C47E00E9C781 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RYKJA9N763;
 				INFOPLIST_FILE = SalonTests/Info.plist;
