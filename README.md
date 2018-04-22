@@ -64,16 +64,7 @@ extension ViewStyle {
             label.textColor = .red
             label.font = .systemFont(ofSize: 14)
         }
-    }
-
-    // You can also use the `ViewStyle.style()` static functions to infer the type and
-    // save typing ViewStyle<Type> multiple times.
-    static var myNicerRedLabel: ViewStyle<MyNiceLabel> {
-        return .style { label in
-            label.textColor = .red
-            label.font = .systemFont(ofSize: 14)
-        }
-    }
+	}
 }
 ```
 
@@ -88,6 +79,38 @@ final class MyNiceLabel: UILabel {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.apply(style: .myNiceRedLabel)
+    }
+}
+```
+
+### Convenience
+
+Littering your code with `ViewStyle<MyViewClass>` references is verbose, tedious and repetitive, so Salon includes a couple of wrappers to keep your code cleaner.
+	
+Any `Styleable` item (i.e. `UIView` and `CALayer`) includes a `Style` typealias that references `ViewStyle<Self>`. Additionally, there is the `ViewStyle.style` static method for initialisation.
+	
+So this:
+
+```swift
+extension ViewStyle {
+    static var myNiceRedLabel: ViewStyle<MyNiceLabel> {
+        return ViewStyle<MyNiceLabel> { label in
+            label.textColor = .red
+            label.font = .systemFont(ofSize: 14)
+        }
+    }
+}
+```
+
+becomes this:
+
+```swift
+extension ViewStyle {
+    static var myNiceRedLabel: MyNiceLabel.Style {
+        return .style { label in
+            label.textColor = .red
+            label.font = .systemFont(ofSize: 14)
+        }
     }
 }
 ```
@@ -237,6 +260,31 @@ extension ViewStyle {
 }
 ```
 
+### Style Re-use
+
+One of the objectives of Salon is to enable style re-use across your app, but with composition rather than inheritance:
+
+```swift
+extension ViewStyle {
+    
+    // global style that all buttons should use
+    static var allButtons: UIButton.Style {
+        return .style { button in
+            button.layer.cornerRadius = 8
+        }
+    }
+    
+    // our form submit button should be bold
+    static var submitButton: UIButton.Style {
+        return .compose(
+            .allButtons,
+            .style { button in
+                button.titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
+            }
+        )
+    }
+}
+```
 
 ## Author
 
