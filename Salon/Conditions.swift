@@ -149,7 +149,7 @@ extension ViewStyle.Condition where T: UIControl {
     ///
     /// - Returns: The new Condition.
     ///
-    public static func controlState (equals state: UIControlState) -> ViewStyle.Condition {
+    public static func controlState (equals state: UIControl.State) -> ViewStyle.Condition {
         return ViewStyle.Condition { $0.state == state }
     }
 }
